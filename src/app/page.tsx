@@ -1,5 +1,12 @@
-import { root } from './style.css'
+'use client'
+
+import { ProcessProvider } from '@/stores/process'
+import { WindowManager } from '@/system/WindowManager'
 
 export default function Home() {
-    return <h1 className={root}>Hello</h1>
+    return (
+        <ProcessProvider>
+            <WindowManager />
+        </ProcessProvider>
+    )
 }
