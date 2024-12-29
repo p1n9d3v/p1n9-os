@@ -1,5 +1,5 @@
 import { root } from './style.css'
 
 export default function Home() {
-    return <div className={root}>Hello</div>
+    return <h1 className={root}>Hello</h1>
 }
