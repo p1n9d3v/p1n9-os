@@ -1,5 +1,12 @@
+import { test1, test2 } from './style.css'
+
 function Hello() {
-    return <h1>Hello Zero</h1>
+    return (
+        <>
+            <h1 className={test1}>Hello Zero</h1>
+            <h1 className={test2}>Hello Zero</h1>
+        </>
+    )
 }
 
 export default Hello

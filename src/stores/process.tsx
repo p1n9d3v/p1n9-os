@@ -1,5 +1,3 @@
-'use client'
-
 import type { ProcessContextState, Processes } from '@/types/store/process'
 import { createContext, ReactNode, useContext, useState } from 'react'
 

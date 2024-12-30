@@ -1,25 +1,34 @@
+import '@/styles/global.css'
 import type { Metadata } from 'next'
 import localFont from 'next/font/local'
-import '@/styles/global.css'
 
-const DankMonoFonts = localFont({
+const DankMonoFont = localFont({
     src: [
         {
             path: '../../public/fonts/DankMono-Regular.woff2',
-            weight: '400',
+            weight: 'normal',
             style: 'normal',
         },
         {
             path: '../../public/fonts/DankMono-Italic.woff2',
-            weight: '400',
+            weight: 'normal',
             style: 'italic',
         },
         {
             path: '../../public/fonts/DankMono-Bold.woff2',
-            weight: '700',
+            weight: 'bold',
             style: 'normal',
         },
     ],
+    display: 'swap',
+    variable: '--font-dank-mono',
+})
+
+const PretendardFont = localFont({
+    src: '../../public/fonts/PretendardVariable.woff2',
+    display: 'swap',
+    weight: '100 900',
+    variable: '--font-pretendard',
 })
 
 export const metadata: Metadata = {
@@ -33,8 +42,12 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en">
-            <body className={DankMonoFonts.className}>{children}</body>
+        <html lang="en" suppressHydrationWarning>
+            <body
+                className={`${PretendardFont.className} ${DankMonoFont.className}`}
+            >
+                {children}
+            </body>
         </html>
     )
 }
