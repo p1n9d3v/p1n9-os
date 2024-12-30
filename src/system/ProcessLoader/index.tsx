@@ -2,7 +2,7 @@ import { useProcessContext } from '@/stores/process'
 import { Suspense } from 'react'
 import Window from '@/system/Window'
 
-export const WindowManager = () => {
+const ProcessLoader = () => {
     const { processes } = useProcessContext()
 
     return Object.entries(processes).map(([id, { Component, hasWindow }]) =>
@@ -22,3 +22,5 @@ export const WindowManager = () => {
         )
     )
 }
+
+export default ProcessLoader
