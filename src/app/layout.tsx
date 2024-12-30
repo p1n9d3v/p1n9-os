@@ -1,5 +1,7 @@
 import '@/styles/global.css'
+import { macTheme } from '@/styles/theme.css'
 import type { Metadata } from 'next'
+import { ThemeProvider } from 'next-themes'
 import localFont from 'next/font/local'
 
 const DankMonoFont = localFont({
@@ -42,11 +44,20 @@ export default function RootLayout({
     children: React.ReactNode
 }>) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html suppressHydrationWarning>
             <body
-                className={`${PretendardFont.className} ${DankMonoFont.className}`}
+                className={`${PretendardFont.className} ${DankMonoFont.className} `}
             >
-                {children}
+                <ThemeProvider
+                    enableSystem={false}
+                    attribute="class"
+                    value={{
+                        mac: macTheme,
+                    }}
+                    defaultTheme="mac"
+                >
+                    {children}
+                </ThemeProvider>
             </body>
         </html>
     )
