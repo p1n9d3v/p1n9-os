@@ -2,10 +2,11 @@
 
 import { ProcessProvider } from '@/stores/process'
 import { WindowManager } from '@/system/WindowManager'
+import { processDirectory } from '@/utils/process'
 
 export default function Home() {
     return (
-        <ProcessProvider>
+        <ProcessProvider startupProcesses={processDirectory}>
             <WindowManager />
         </ProcessProvider>
     )

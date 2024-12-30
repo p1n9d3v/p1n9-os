@@ -2,7 +2,7 @@ type Process = {
     Component: React.ComponentType
 }
 
-type Processes = {
+export type Processes = {
     [id: string]: Process
 }
 
