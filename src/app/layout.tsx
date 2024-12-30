@@ -24,6 +24,7 @@ const DankMonoFont = localFont({
     ],
     display: 'swap',
     variable: '--font-dank-mono',
+    preload: true,
 })
 
 const PretendardFont = localFont({
@@ -31,6 +32,7 @@ const PretendardFont = localFont({
     display: 'swap',
     weight: '100 900',
     variable: '--font-pretendard',
+    preload: true,
 })
 
 export const metadata: Metadata = {

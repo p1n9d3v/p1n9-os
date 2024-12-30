@@ -3,4 +3,5 @@ import { vars } from '@/styles/global.css'
 
 export const container = style({
     backgroundColor: vars.theme.color.window,
+    height: 500,
 })

@@ -5,22 +5,17 @@ import Window from '@/system/Window'
 const ProcessLoader = () => {
     const { processes } = useProcessContext()
 
-    return Object.entries(processes).map(([id, { Component, hasWindow }]) =>
-        hasWindow ? (
-            <Window key={id}>
-                <Suspense
-                    fallback={<div>...Loading</div>}
-                    children={<Component />}
-                />
-            </Window>
-        ) : (
-            <Suspense
-                key={id}
-                fallback={<div>...Loading</div>}
-                children={<Component />}
-            />
-        )
-    )
+    return Object.entries(processes).map(([id, { Component, hasWindow }]) => (
+        <Suspense key={id} fallback={<div>...Loading</div>}>
+            {hasWindow ? (
+                <Window>
+                    <Component />
+                </Window>
+            ) : (
+                <Component />
+            )}
+        </Suspense>
+    ))
 }
 
 export default ProcessLoader
