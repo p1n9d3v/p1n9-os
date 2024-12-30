@@ -1,7 +1,6 @@
 import { style } from '@vanilla-extract/css'
+import { vars } from '@/styles/global.css'
 
 export const container = style({
-    backgroundColor: 'grey',
-    fontSize: '24px',
-    textAlign: 'center',
+    backgroundColor: vars.theme.color.window,
 })

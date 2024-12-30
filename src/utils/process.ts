@@ -1,7 +1,7 @@
-import { lazy } from 'react'
-
+import dynamic from 'next/dynamic'
 export const processDirectory = {
     Hello: {
-        Component: lazy(() => import('@/components/Hello')),
+        Component: dynamic(() => import('@/components/Hello')),
+        hasWindow: true,
     },
 }

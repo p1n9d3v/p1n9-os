@@ -1,5 +1,6 @@
 type Process = {
     Component: React.ComponentType
+    hasWindow: boolean
 }
 
 export type Processes = {
