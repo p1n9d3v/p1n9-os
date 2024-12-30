@@ -1,12 +1,8 @@
 'use client'
 
-import { Processes } from '@/types'
+import type { ProcessContextState } from '@/types/store/process'
 import { processDirectory } from '@/utils/process'
 import { createContext, ReactNode, useContext, useState } from 'react'
-
-type ProcessContextState = {
-    processes: Processes
-}
 
 const ProcessContext = createContext<ProcessContextState>({
     processes: {},
