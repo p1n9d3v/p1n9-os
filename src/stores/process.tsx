@@ -23,7 +23,7 @@ export const ProcessProvider = ({
     )
 }
 
-export const useProcess = () => {
+export const useProcessContext = () => {
     const processContext = useContext(ProcessContext)
 
     if (!processContext)

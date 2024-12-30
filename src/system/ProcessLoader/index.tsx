@@ -1,7 +1,7 @@
-import { useProcess } from '@/stores/process'
+import { useProcessContext } from '@/stores/process'
 
 export const WindowManager = () => {
-    const { processes } = useProcess()
+    const { processes } = useProcessContext()
 
     return Object.entries(processes).map(([id, { Component }]) => (
         <Component key={id} />
