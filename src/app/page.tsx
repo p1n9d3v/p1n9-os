@@ -1,7 +1,7 @@
 'use client'
 
 import { ProcessProvider } from '@/stores/process'
-import { WindowManager } from '@/system/WindowManager'
+import { WindowManager } from '@/system/ProcessLoader'
 import { processDirectory } from '@/utils/process'
 
 export default function Home() {
