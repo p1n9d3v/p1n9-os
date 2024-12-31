@@ -2,9 +2,10 @@
 
 import { ProcessProvider } from '@/stores/process'
 import ProcessLoader from '@/system/ProcessLoader'
-import { processDirectory } from '@/utils/process'
+import { getStartupProcesses } from '@/utils/processDirectory'
 
 export default function Home() {
+    const processDirectory = getStartupProcesses()
     return (
         <ProcessProvider startupProcesses={processDirectory}>
             <ProcessLoader />
