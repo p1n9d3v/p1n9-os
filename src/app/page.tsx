@@ -1,5 +1,6 @@
 'use client'
 
+import Desktop from '@/components/Desktop'
 import { ProcessProvider } from '@/stores/process'
 import ProcessLoader from '@/system/ProcessLoader'
 import { getStartupProcesses } from '@/utils/processDirectory'
@@ -8,7 +9,9 @@ export default function Home() {
     const processDirectory = getStartupProcesses()
     return (
         <ProcessProvider startupProcesses={processDirectory}>
-            <ProcessLoader />
+            <Desktop>
+                <ProcessLoader />
+            </Desktop>
         </ProcessProvider>
     )
 }
