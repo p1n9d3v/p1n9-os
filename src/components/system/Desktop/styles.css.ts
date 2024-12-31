@@ -1,8 +1,6 @@
-import { vars } from '@/styles/global.css'
 import { style } from '@vanilla-extract/css'
 
 export const container = style({
-    backgroundColor: vars.theme.color.background,
     bottom: 0,
     top: 0,
     left: 0,

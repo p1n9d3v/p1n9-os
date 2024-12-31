@@ -5,7 +5,10 @@ const STARTUP_PROCESS: string[] = ['Hello']
 
 const processDirectory: Processes = {
     Hello: {
-        Component: dynamic(() => import('@/components/Hello'), { ssr: false }),
+        Component: dynamic(() => import('@/components/Hello'), {
+            ssr: false,
+            loading: () => <div>Loading .... </div>,
+        }),
         hasWindow: true,
     },
 }
