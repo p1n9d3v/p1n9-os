@@ -1,6 +1,6 @@
+import Window from '@/components/Window'
 import { useProcessContext } from '@/stores/process'
 import { Suspense } from 'react'
-import Window from '@/system/Window'
 
 const ProcessLoader = () => {
     const { processes } = useProcessContext()
