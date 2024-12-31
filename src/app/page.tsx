@@ -1,8 +1,6 @@
-'use client'
-
-import Desktop from '@/components/Desktop'
+import Desktop from '@/components/system/Desktop'
+import ProcessLoader from '@/components/system/ProcessLoader'
 import { ProcessProvider } from '@/stores/process'
-import ProcessLoader from '@/system/ProcessLoader'
 import { getStartupProcesses } from '@/utils/processDirectory'
 
 export default function Home() {

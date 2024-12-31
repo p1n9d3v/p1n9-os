@@ -1,4 +1,4 @@
-import Window from '@/components/Window'
+import Window from '@/components/system/Window'
 import { useProcessContext } from '@/stores/process'
 import type { Process } from '@/types/store/process'
 import { Suspense } from 'react'
