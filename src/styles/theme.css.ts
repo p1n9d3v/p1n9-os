@@ -29,6 +29,7 @@ export const themeContract = createThemeContract({
     color: {
         primary: null,
         window: null,
+        background: null,
     },
 })
 
@@ -36,5 +37,6 @@ export const macTheme = createTheme(themeContract, {
     color: {
         primary: '#008000',
         window: '#808080',
+        background: '#000',
     },
 })
