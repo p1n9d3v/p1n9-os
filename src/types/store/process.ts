@@ -1,4 +1,4 @@
-type Process = {
+export type Process = {
     Component: React.ComponentType
     hasWindow: boolean
 }
