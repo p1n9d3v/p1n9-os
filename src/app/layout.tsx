@@ -1,7 +1,5 @@
 import '@/styles/global.css'
-import { windowTheme } from '@/styles/theme.css'
 import type { Metadata } from 'next'
-import { ThemeProvider } from 'next-themes'
 import localFont from 'next/font/local'
 
 const DankMonoFont = localFont({
@@ -48,18 +46,9 @@ export default function RootLayout({
     return (
         <html suppressHydrationWarning>
             <body
-                className={`${PretendardFont.className} ${DankMonoFont.className} `}
+                className={`${PretendardFont.className} ${DankMonoFont.className}`}
             >
-                <ThemeProvider
-                    enableSystem={false}
-                    attribute="class"
-                    value={{
-                        window: windowTheme,
-                    }}
-                    defaultTheme="window"
-                >
-                    {children}
-                </ThemeProvider>
+                {children}
             </body>
         </html>
     )

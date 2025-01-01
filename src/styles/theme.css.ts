@@ -1,8 +1,4 @@
-import {
-    createGlobalTheme,
-    createTheme,
-    createThemeContract,
-} from '@vanilla-extract/css'
+import { createGlobalTheme } from '@vanilla-extract/css'
 
 export const globalTheme = createGlobalTheme(':root', {
     fontFamily: {
@@ -24,16 +20,6 @@ export const globalTheme = createGlobalTheme(':root', {
         '8xl': '96px',
         '9xl': '128px',
     },
-})
-export const themeContract = createThemeContract({
-    color: {
-        primary: null,
-        window: null,
-        background: null,
-    },
-})
-
-export const windowTheme = createTheme(themeContract, {
     color: {
         primary: '#008000',
         window: '#808080',
