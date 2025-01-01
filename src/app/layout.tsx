@@ -1,5 +1,5 @@
 import '@/styles/global.css'
-import { macTheme } from '@/styles/theme.css'
+import { windowTheme } from '@/styles/theme.css'
 import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 import localFont from 'next/font/local'
@@ -54,9 +54,9 @@ export default function RootLayout({
                     enableSystem={false}
                     attribute="class"
                     value={{
-                        mac: macTheme,
+                        window: windowTheme,
                     }}
-                    defaultTheme="mac"
+                    defaultTheme="window"
                 >
                     {children}
                 </ThemeProvider>
