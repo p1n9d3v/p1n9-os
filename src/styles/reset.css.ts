@@ -224,3 +224,17 @@ globalStyle(':where(dialog:modal)', {
         },
     },
 })
+
+/**
+ * list style
+ */
+
+globalStyle('ol,ul', {
+    '@layer': {
+        [layers.reset]: {
+            listStyle: 'none',
+            padding: 0,
+            margin: 0,
+        },
+    },
+})
